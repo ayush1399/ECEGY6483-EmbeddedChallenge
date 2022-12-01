@@ -86,6 +86,26 @@ public:
     setup();
   }
 
+  void getPartId()
+  {
+    char write_buffer[1];
+    write_buffer[0] = MAX30102_REG_PART_ID;
+    i2c.write(MAX30102_WRITE_ADDRESS, write_buffer, 1, true);
+    char read_buffer[1];
+    i2c.read(MAX30102_READ_ADDRESS, read_buffer, 1);
+    printf("MAX30102 Part ID: %d", *read_buffer);
+  }
+
+  void getRevisionId()
+  {
+    char write_buffer[1];
+    write_buffer[0] = MAX30102_REG_REVISION_ID;
+    i2c.write(MAX30102_WRITE_ADDRESS, write_buffer, 1, true);
+    char read_buffer[1];
+    i2c.read(MAX30102_READ_ADDRESS, read_buffer, 1);
+    printf("MAX30102 Revision ID: %d", *read_buffer);
+  }
+
   void shutdown()
   {
     set_mode(MAX30102_MODE_SHUTDOWN);
@@ -114,11 +134,12 @@ private:
 
 int main()
 {
-  printf("Hello\n");
+  printf("STM32F429ZS Started!\n");
   MAX30102 sensor;
   while (true)
   {
-
+    sensor.getPartId();
+    sensor.getRevisionId();
     thread_sleep_for(1000);
   }
 }
