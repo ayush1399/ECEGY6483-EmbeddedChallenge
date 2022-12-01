@@ -12,7 +12,7 @@ I2C i2c(PF_0, PF_1);
 #define MAX30102_REG_SPO2_CONFIG 0x0A /**< spo2 config register */
 
 #define MAX30102_REG_REVISION_ID 0xFE
-#define MAX30102_REG_PART_ID 0xFF
+#define MAX30102_REG_PART_ID 0xFF // Should always be 0x15. Identical to MAX30102.
 
 #define REG_INTR_STATUS_1 0x00
 #define REG_INTR_STATUS_2 0x01
@@ -91,19 +91,21 @@ public:
     char write_buffer[1];
     write_buffer[0] = MAX30102_REG_PART_ID;
     i2c.write(MAX30102_WRITE_ADDRESS, write_buffer, 1, true);
+    printf("MAX30102_REG_PART_ID i2c.write: %d\n", write);
     char read_buffer[1];
-    i2c.read(MAX30102_READ_ADDRESS, read_buffer, 1);
-    printf("MAX30102 Part ID: %d", *read_buffer);
+    int read = i2c.read(MAX30102_READ_ADDRESS, read_buffer, 1);
+    printf("Success: %d \t Part ID: %c\n\n", read, *read_buffer);
   }
 
   void getRevisionId()
   {
     char write_buffer[1];
     write_buffer[0] = MAX30102_REG_REVISION_ID;
-    i2c.write(MAX30102_WRITE_ADDRESS, write_buffer, 1, true);
+    int write = i2c.write(MAX30102_WRITE_ADDRESS, write_buffer, 1, true);
+    printf("MAX30102_REG_REVISION_ID i2c.write: %d\n", write);
     char read_buffer[1];
-    i2c.read(MAX30102_READ_ADDRESS, read_buffer, 1);
-    printf("MAX30102 Revision ID: %d", *read_buffer);
+    int read = i2c.read(MAX30102_READ_ADDRESS, read_buffer, 1);
+    printf("Success: %d \t Revision ID: %c\n\n", *read_buffer);
   }
 
   void shutdown()
@@ -140,6 +142,6 @@ int main()
   {
     sensor.getPartId();
     sensor.getRevisionId();
-    thread_sleep_for(1000);
+    thread_sleep_for(10000);
   }
 }
