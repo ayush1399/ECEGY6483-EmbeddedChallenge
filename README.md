@@ -14,3 +14,7 @@ The coding is split into two parts. The first part is based on the connection of
 For the first part, we constructed the connection between the microcontroller and the MAX30102 sensor to read values of the heart rate and breathing rate of a patient.
 
 For the second part, we developed an application for iPhone to display the data in a more understanding way that would make it easy for the average person to understand. The application receives the data from the microcontroller and sensor, showing the throw values as they increase/decrease. Graphs are also included to make the data more presentable.
+
+  
+# Future Developments
+ While this application is useful and helps users interpret the data easier, we hope to add more features to it in the future. For instance, we would like to add a sleep tracking feature that shows the user what the infants current breath rate and heart rate are. In addition, it would display the amount of sleep time that the infant got. Another feature is being able to store the results every time the user runs a test so that they have records of any instances.
