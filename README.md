@@ -1,5 +1,4 @@
-# ECE-GY 6483 - Embedded Challenge Fall 2022 Term Project
-#Just Breathe
+# ECE-GY 6483 - Embedded Challenge Fall 2022 Term Project - Just Breathe
 
 Project Members: Ayushman Singh (as16513), Dimitrios Kaoutzanis (dk4572), Rachel Abreu (ra2466)
 
