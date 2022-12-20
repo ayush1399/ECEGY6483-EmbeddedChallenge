@@ -51,8 +51,8 @@ int main()
 
   while (1)
   {
-    sensor.getPartId();
-    sensor.getRevisionId();
+    // sensor.getPartId();
+    // sensor.getRevisionId();
     // sensor.printTemperature();
     // int blr = ble.readable();
     // printf("Readable %d\n", blr);

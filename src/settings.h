@@ -2,7 +2,7 @@
 #include <mbed.h>
 
 // #define SETTINGS 0
-#define PRINT_ENABLED 1
+#define PRINT_ENABLED 0
 
 class BaseUtilities
 {
