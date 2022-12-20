@@ -5,6 +5,11 @@ Project Members: Ayushman Singh (as16513), Dimitrios Kaoutzanis (dk4572), Rachel
 # Project Description
 The purpose of this project is to use a STM32F429 microcontroller to detect when a baby stops breathing by activating a trigger. We used the STM32F429 microcontroller along with the MAX30102 sensor. For this project, we decided to build an app that will help display the values that are read from the sensor. Raw data from the sensor is sent to a HM10 Bluetooth module that is connected to the microcontroller using UART (PC_6 and PC_7 pins) and then shown on the app. The app also provides a warning that let's the patient/caregiver know when the breathing has stopped.
 
+![IMG_0153](https://user-images.githubusercontent.com/108710580/208579349-b1ec7194-13eb-480c-b501-9cda66fa1e6f.PNG)
+![IMG_0154](https://user-images.githubusercontent.com/108710580/208579440-72e4af52-b3b2-47c8-b425-75713f1f3393.PNG)
+![IMG_0155](https://user-images.githubusercontent.com/108710580/208579442-f22c9193-83e2-4753-82d4-5164361db919.PNG)
+![IMG_7969](https://user-images.githubusercontent.com/108710580/208579670-509f5680-4d38-42b4-a720-6cd216fed8df.png)
+
 # Code Description
 The coding is split into two parts. The first part is based on the connection of the microcontroller and the MAX30102 (which is connected to the microcontroller over I2C using Pins PF_0 and PF_1). The second part is what was used to construct the application. The application was developed using a fork of a React Native BLE sample app (https://github.com/ayush1399/SIDS-App). For the first part, we constructed the connection between the microcontroller, and the MAX30102 sensor to read values of the heart rate and blood oxygen of a patient. For the second part, we developed an application for iPhone to display the data in a more understanding way that would make it easy for the average person to understand. The application receives the raw data from the microcontroller and sensor, showing the values as they increase/decrease. In addition, it indicates a warning when the oxygen measurement is normal or abnormal, such as "BREATH IS NORMAL" or "NOT BREATHING!!!". Graphs are also included to make the data more presentable. The app also displays whether sensor is calibrated (giving accurate values) or is being calibrated.
  
