@@ -1,4 +1,4 @@
-# ECE - GY 6483 - Embedded Challenge Fall 2022 Term Project
+# ECE-GY 6483 - Embedded Challenge Fall 2022 Term Project
 
 Project Members: Ayushman Singh (as16513), Dimitrios Kaoutzanis (dk4572), Rachel Abreu (ra2466)
 
