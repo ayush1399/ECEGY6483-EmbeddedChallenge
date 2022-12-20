@@ -4,7 +4,7 @@ Project Members: Ayushman Singh (as16513), Dimitrios Kaoutzanis (dk4572), Rachel
 
 
 # Project Description
-The purpose of this project is to detect when an infant has stopped breathing by activating a trigger, using the STM32F429i microcontroller. We used the STM32F429i microcontroller along with the MAX30102 sensor. For this project, we decided to build an app that will help display the values that are read from the sensor. The app also provides a warning that let's the patient/caregiver know when the breathing has stopped.
+The purpose of this project is to detect when an infant has stopped breathing by activating a trigger, using the STM32F429 microcontroller. We used the STM32F429 microcontroller along with the MAX30102 sensor. For this project, we decided to build an app that will help display the values that are read from the sensor. The app also provides a warning that let's the patient/caregiver know when the breathing has stopped.
 
 Here is a quick look at the application:
 <insert image>
