@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# ECEGY6483-EmbeddedChallenge
-=======
 # ECE-GY 6483 - Embedded Challenge Fall 2022 Term Project - Just Breathe
 
 Project Members: Ayushman Singh (as16513), Dimitrios Kaoutzanis (dk4572), Rachel Abreu (ra2466)
@@ -15,4 +12,3 @@ The coding is split into two parts. The first part is based on the connection of
 While this application is useful and helps users interpret data more easily, we hope to add more features to it in the future. For example, we wanted to add a sleep tracking feature that would show the user the baby's current breathing rate and heart rate. What's more, it would display the amount of sleep time that the infant got. Another feature is the ability to store results each time a user runs a test so they have a record of any instance.
 We also want to explore using the IR sensor on the MAX30102 to detect breathing patterns of the baby from a distance (without touching the baby) - this would be configurable from the app allowing the user to choose between 2 modes, sensing from a distance or sensing when in contact with the infant.
 We also want apply more filters to make the breathing detection even more robust and switch to the MAX30101 sensor which is more accurate than the MAX30102 sensor (due to the presence of an additional green LED).
->>>>>>> origin/main
